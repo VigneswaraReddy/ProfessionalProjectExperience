@@ -1,0 +1,26 @@
+Upgrade existing OBIEE 11g to OBIEE 12c. You have to be on OBIEE 11.1.1.7 or later to be able to successfully do the migration. If you are on an earlier release of OBIEE, first migrate to 11.1.1.7 and follow this video to migrate to OBIEE 12c.
+
+Here are the steps:
+1) Exporting OBIEE 11g catalog & RPD
+
+copy [ORACLE_HOME]\bi\migration-tool\jlib\bi-migration-tool.jar    to your OBIEE 11g system say to c:\migration
+ 
+run the following command on your OBIEE 11g system
+java -jar bi-migration-tool.jar out  [BI11g Home] [BI11g   Domain]  [output file]
+
+ex. java -jar c:\migration\bi-migration-tool.jar out c:\oracle\obi\Oracle_BI  c:\oracle\obi\user_projects\domains\bifoundation_domain  c:\migration\BI11g.jar
+
+Copy the exported file back to your OBIEE 12c server
+2) Importing OBIEE 11g catalog & RPD into 12c
+
+run the following command on your OBIEE 12c system
+java -jar bi-migration-tool.jar in [BI12c Home] [BI12c Domain]  [exported file] [service instance name]
+
+ex. java -jar c:\oracle\middleware\bi\migration-tool\jlib\bi-migration-tool.jar  in c:\oracle\Middleware\ c:\oracle\Middleware\user_projects\domains\bi c:\migration\BI11g.jar ssi
+
+Reference : https://docs.oracle.com/middleware/1221/core/BIMIG/GUID-D0867450-1AEF-43DE-8144-7816F7105CB1.htm#BIMIG-GUID-D0867450-1AEF-43DE-8144-7816F7105CB1
+https://blogs.perficient.com/2017/11/14/oracle-business-intelligence-out-of-place-upgrade-11g-to-12c/
+
+
+
+

@@ -1,0 +1,13 @@
+Technology: Oracle PL/SQL, SQL,IVR,VXML, DataStation,USSD 
+Tools:  PL SQL Developer,IVR , CTI System (IVR,VXML,MSC, IDE, Aplogic, Data Station)
+Operating Systems: Windows 7,8,10
+Duration : Oct 2014 to Feb 2017
+Role : Software Engineeer 
+Title : IVR Developer
+
+	Gathering the Requirements from Business Analyst
+	Converting the design into the Interactive voice response application
+	Interacting with Third-party systems to gather the billing and CRM Information of the called customer
+	Pre-Deployment and Post deployment testing and Support Handling the live issues at the earliest
+	Extensively worked on IVR Technologies in CTI System
+
