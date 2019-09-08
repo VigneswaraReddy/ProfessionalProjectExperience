@@ -1,0 +1,4 @@
+1. Create one RCU schema on any DB user and make sure you have downloaded Same version of OBIEE Client and RCU Softwares.
+2. Install OBIEE 11.1.1.5 Desktop Client tool in Windows 7 Only .(Enter RCU User Credentials at the time installation). Refer Instalation Document attached in Zip
+3. Refer Document for Converting EUL to RPD
+
