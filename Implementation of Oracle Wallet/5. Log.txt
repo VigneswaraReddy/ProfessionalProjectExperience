@@ -1,0 +1,33 @@
+export servicename;[CDTRM01@bld07576001 ~]$ ksh -x test_12.sh
++ . /rmdm/RMDM_DEV1/env.sh
++ username=''
++ export username
++ password=''
++ export password
++ servicename=DBFS
++ export servicename
++ sqlplus /@DBFS
++ 0<< \!
+select 1 from dual;
+exit 0
+!
+
+SQL*Plus: Release 12.1.0.2.0 Production on Wed Aug 23 11:26:03 2017
+
+Copyright (c) 1982, 2014, Oracle.  All rights reserved.
+
+Last Successful login time: Wed Aug 23 2017 11:03:11 +01:00
+
+Connected to:
+Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
+With the Partitioning, Real Application Clusters, Automatic Storage Management, OLAP,
+Advanced Analytics, Real Application Testing and Unified Auditing options
+
+SQL>
+         1
+----------
+         1
+
+SQL> Disconnected from Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
+With the Partitioning, Real Application Clusters, Automatic Storage Management, OLAP,
+Advanced Analytics, Real Application Testing and Unified Auditing options

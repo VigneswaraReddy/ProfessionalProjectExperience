@@ -1,0 +1,21 @@
+1. By using Oracle wallet we can store DB username and password w.r.t to Connection String
+2. We have followed below way to remove all stored usernames and passwords from environment file in unix
+3. We have analyzed all shell scripts and understood that mostly we are reading username and passwords from single environment file(env.sh) 
+4. we have modified some shell scripts for Wherever username and passwords are hard coded to configure in environment file
+5. we have prepared one excel sheet with username and password and db connection string (configured in tnsnames.ora) for each Application
+6. Wherever we are connecting to multiple user from single db connection string then we have created new entries  in tnsnames.ora becasue as per oracle wallet we can connect to only user from connection string 
+ex : orcl -> hr, ora1,emp 
+for this we have created two more connection string in tnsnames.ora file orcl_ora1 orcl_emp then we have mapped users like below
+orcl -> hr
+orcl_ora1 -> ora1
+orcl_emp -> emp
+7. By using temporary environment file we have tested wallet using command window & Shell scripts
+ex : sqlplus -/@dbfs 
+here we are not passing username and password .
+8. Later we have commented all username and password in env.sh file and created copy of username variable and assigned nulls
+9. In shell scripts similary we have modified db connection strings for whever its connecting to more than one user using same I.p (ex :for ora1,emp user connection scripts)
+10. w ehave tested all shell scripts and its working fine and same we deployed in production
+
+Cons :
+1. Oracle wallet password we have to remember or we can store in common repository otherwise ther is no way to recover oracle wallet password. If you forgot wallet password then we can't modify/delete/add new/ols user credentials.
+

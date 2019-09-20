@@ -1,0 +1,38 @@
+$ mkdir -p /oraclient/product/12.1.0.2.0/client/network/wallet;
+$ chown oraclient /oraclient/product/12.1.0.2.0/client/network/wallet
+$ chmod 777 /oraclient/product/12.1.0.2.0/client/network/wallet
+$ mkstore -wrl /oraclient/product/12.1.0.2.0/client/network/wallet -create
+Oracle Secret Store Tool : Version 12.1.0.2
+Copyright (c) 2004, 2014, Oracle and/or its affiliates. All rights reserved.
+
+Enter password:
+Enter password again:
+$ /client/network/wallet -createCredential DBFS admin password1              <
+Oracle Secret Store Tool : Version 12.1.0.2
+Copyright (c) 2004, 2014, Oracle and/or its affiliates. All rights reserved.
+
+Enter wallet password:
+Create credential oracle.security.client.connect_string1
+$ /client/network/wallet -listCredential                                     <
+Oracle Secret Store Tool : Version 12.1.0.2
+Copyright (c) 2004, 2014, Oracle and/or its affiliates. All rights reserved.
+
+Enter wallet password:
+List credential (index: connect_string username)
+1: DBFS admin
+$
+$ sqlplus /@DBFS
+
+SQL*Plus: Release 12.1.0.2.0 Production on Tue Aug 29 10:35:25 2017
+
+Copyright (c) 1982, 2014, Oracle.  All rights reserved.
+
+Last Successful login time: Tue Aug 29 2017 08:55:30 +01:00
+
+Connected to:
+Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production
+With the Partitioning, Real Application Clusters, Automatic Storage Management, OLAP,
+Advanced Analytics, Real Application Testing and Unified Auditing options
+
+
+
