@@ -1,0 +1,36 @@
+As Part of this requirement we have to migrate Legacy System MAC(Implemented in DotNet) to Oracle
+
+Presently in MAC team 40 people working for Increasing Job priority based on certain conditions and their getting data via mail from ApplicationA which is HAAS
+
+So we have proposed one solution like we will extract data from HAAS and store it in ApplicationB and we will apply all your conditions to increase the job priority. But here we don't have access to see code from ApplicationA and its very old product no one knows full end to end buisness impact and logic. 
+
+So we have decided to write code based on Input and Output data. 
+
+Daily we are taking InputData and output data from MAC to understand below factos
+1. what is the job score before and how much its incremented today 
+2. how many times this job missed
+3. what is the job type like Provide, Cease, Modify, Provision, UNKN
+4. what is the product type (GEA, ESI, LLU, PSTN, SOGEA, WLR3, SBS   )
+5. what is the job category like Fiber(FTTC,FTTP), Copper(WLR3,LLU,) 
+6. What is the Parent job like Fiber -> Copper or Copper -> Fiber 
+7. We have to check for Missing job they are creating new job id and passing previous job number in Different columns based on Product & Order types Like Flow_order_num, circuit_id, job_no, 
+8. we have prepared one procedure with all above constraints to increase Job score or Chnaging job slot .And we have got some 40% accuracy starting and daily we are comparing and add/modify conditions to increase Accuracy.
+9. After 3 months we have achieved 95% accuracy and we have closed MAC system and saved Manual effort from 40 People.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,16 @@
+Here first we have to Fetch data source data from ApplicationA(HAAS) to ApplicationB(Oracle Database)
+So we have followed below steps
+1. We have created one oozie workflow uisng BigData(Hive,HDFS,Shell,Sqoop,Oozie) to run daily at particular intervals & Event Based .
+a. we have created replica of ApplicationA table in ApplicationB HAAS System using Hive Script
+b. we have created a oozie job so that it will load incremental data from Source -> Destination.
+c. in Hive insert script we have applying dynamic partitions conditions so that it will improve perfomance while querying the data
+d. After getting data abd by using Sqoop we are exporting data from HAAS to RDMS
+e. if any failure in this process we have added SLA events for sending mails to Support Teams 
+
+2. after loading data into Oracle Database we have added Inser_date column to identify data and we have followed below way to increase job score
+
+3. Based on Product  we are fetching data from table using forrec(select .. where product='')
+
+4. Then further we have appplied filter based on order type and applying filter like new_job form application B = Old_job form Application A  or phone=circuit etc 
+
+5. After that we have frame xml to send web request to ApplicationC for increasing job score or job slot.
